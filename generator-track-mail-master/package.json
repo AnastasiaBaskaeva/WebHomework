@@ -1,0 +1,96 @@
+{
+  "name": "generator-track-mail",
+  "version": "0.5.1",
+  "description": "",
+  "homepage": "https://github.com/frontend-track-mail-ru",
+  "author": {
+    "name": "Alexey Opalev",
+    "email": "a.opalev@corp.mail.ru",
+    "url": "https://github.com/frontend-track-mail-ru/generator-track-mail"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "keywords": [
+    "track.mail.ru",
+    "track-mail",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-xo": "^0.27.2",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^12.1.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^2.0.0"
+  },
+  "engines": {
+    "npm": ">= 8"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
+    "to-case": "^2.0.0",
+    "yeoman-generator": "^4.2.0",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "transform": {},
+    "roots": [
+      "tests"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint . -c .eslintrc.js",
+    "pretest": "npm run lint",
+    "test": "jest tests"
+  },
+  "repository": "track-mail-ru/generator-track-mail",
+  "license": "Apache-2.0"
+}
